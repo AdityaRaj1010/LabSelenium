@@ -23,6 +23,9 @@ public class App {
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--disable-gpu");
 
+	options.addArguments("--user-data-dir=/tmp/chrome-user-data");
+	options.addArguments("--data-path=/tmp/chrome-data");
+	options.addArguments("--disk-cache-dir=/tmp/chrome-cache");
         WebDriver driver = new ChromeDriver(options);
 
 try {
