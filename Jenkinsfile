@@ -24,6 +24,11 @@ pipeline {
  echo 'Selenium Automation Testing Executed Successfully!'
  }
  }
+ stage('Execute'){
+ steps {
+ sh 'mvn exec:java -Dexec.mainClass="com.example.App"'
+ }
+ }
  }
  post {
  success { echo 'All Selenium tests passed!' }
