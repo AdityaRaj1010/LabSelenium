@@ -24,25 +24,9 @@ pipeline {
  echo 'Selenium Automation Testing Executed Successfully!'
  }
  }
- stage('Debug Environment') {
-    steps {
-        sh 'whoami'
-        sh 'pwd'
-        sh 'echo $HOME'
-        sh 'which google-chrome'
-        sh 'which chromedriver'
-        sh 'google-chrome --version'
-        sh 'chromedriver --version'
-    }
-}
- stage('Execute'){
- steps {
-sh 'xvfb-run mvn exec:java -Dexec.mainClass="com.example.App"'
- }
- }
  }
  post {
- success { echo 'All Selenium tests passed!' }
+ success { echo 'https://www.saucedemo.com' }
  failure { echo 'Selenium test failed.' }
  always { echo 'Pipeline execution finished.' }
  }
